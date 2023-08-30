@@ -5,7 +5,7 @@ CREATE TABLE public.vehicle(
     "price" decimal NULL,
     "year" integer NULL,
     CONSTRAINT vehicle_pk PRIMARY KEY (id)
-)
+);
 
 CREATE TABLE public.lead(
     id serial4 NOT NULL,
@@ -15,4 +15,4 @@ CREATE TABLE public.lead(
     "vehicleid" int4 NULL,
     CONSTRAINT lead_pk PRIMARY KEY (id),
     CONSTRAINT vehicle_fk FOREIGN KEY (vehicleid) REFERENCES public.vehicle(id)
-)
+);
